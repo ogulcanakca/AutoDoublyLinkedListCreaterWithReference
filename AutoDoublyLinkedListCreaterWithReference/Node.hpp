@@ -1,7 +1,7 @@
 #ifndef Node_hpp
 #define Node_hpp
-#include<iostream>
-using namespace std;
+
+
 
 template<typename Type>
 class Node

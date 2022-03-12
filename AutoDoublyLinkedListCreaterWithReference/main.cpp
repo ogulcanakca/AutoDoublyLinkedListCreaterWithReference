@@ -1,7 +1,5 @@
-#include<iostream>
-
 #include "DoublyLinkedList.cpp"
-using namespace std;
+#include "DoublyLinkedList.hpp"
 
 int main()
 {
@@ -10,14 +8,14 @@ int main()
 	for (int i = 0; i < 5; i++) {
 		list.Append((i + 1) * 11);
 	}
-	cout << list;
+	std::cout << list;
 	for (int i = 0; i < 5; i++) {
 		list.Remove(0);
-		cout << list;
+		std::cout << list;
 	}
 	list.Append(77);
-	cout << list;
+	std::cout << list;
 
 	list.Add(0, 88);
-	cout << list;
+	std::cout << list;
 }

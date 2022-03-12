@@ -5,8 +5,8 @@
 template<typename Type>
 DoublyLinkedList<Type>::DoublyLinkedList()
 {
-	first = 0;
-	numberOfNode = 0;
+	first = nullptr;
+	numberOfNode = nullptr;
 }
 template<typename Type>
 DoublyLinkedList<Type>::~DoublyLinkedList() {
@@ -80,19 +80,7 @@ template<typename Type>
 		}
 		numberOfNode--;
 	}
-	template<typename Type>
-	ostream& operator <<(ostream& os, const DoublyLinkedList<Type>& list){
-		os << setw(15) << "The adress of node" << setw(15) << "data" << setw(15) << "previous" << setw(15) << "next" << endl;
-
-		Node<Type>* temp = list.first;
-		for (int i = 0; i < list.numberOfNode; i++) {
-			os << setw(15) << temp << setw(15) << temp->data << setw(15) << temp->previous << setw(15) << temp->next << endl;
-
-			temp = temp->next;
-		}
-		os << "--------------------------------------" << endl;
-		return os;
-	}
+	
 
 	template<typename Type>
 	Node<Type>* DoublyLinkedList<Type>:: GetNode(int queue)  {
