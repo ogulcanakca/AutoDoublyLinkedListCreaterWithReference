@@ -10,7 +10,7 @@ public:
     Node(const Type& data) // If you noticed, we gain performance with this notation.
     {
         this->data = data;
-        next = previous = 0;
+        next = previous = nullptr;
     }
 
     Type data;

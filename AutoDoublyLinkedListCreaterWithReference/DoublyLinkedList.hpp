@@ -10,11 +10,11 @@ public:
 	DoublyLinkedList();
 
 	~DoublyLinkedList();
-
-	void Append(Type data);
+	void Append(const Type& data);
 	void Remove(int queue);
-	void Remove();
 	
+	void Remove();
+	template<typename Type>
 	friend std::ostream& operator <<(std::ostream& os, const DoublyLinkedList<Type>& list) {
 		
 		os << std::setw(15) << "The adress of node" << std::setw(15) << "data" << std::setw(15) << "previous" << std::setw(15) << "next" << std::endl;
@@ -29,10 +29,10 @@ public:
 		return os;
 	}
 	
-	Node<Type>* GetNode(int queue);
-	void Add(int queue, Type data);
+	void Add(int queue, const Type& data);
 private:
-	Node<Type>* first;
+	Node<Type>* GetNode(int queue);
+	Node<Type>* first ;
 	int numberOfNode;
 };
 
