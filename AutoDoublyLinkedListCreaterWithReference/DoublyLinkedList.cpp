@@ -9,8 +9,9 @@ DoublyLinkedList<Type>::DoublyLinkedList()
 	numberOfNode = 0;
 }
 template<typename Type>
-DoublyLinkedList<Type>::~DoublyLinkedList() {
-	/*Node<Type>* temp = first;
+DoublyLinkedList<Type>::~DoublyLinkedList()
+{
+	Node<Type>* temp = first;
 
 	for (int i = 0; i < numberOfNode; i++)
 	{
@@ -18,9 +19,9 @@ DoublyLinkedList<Type>::~DoublyLinkedList() {
 
 		temp = temp->next;
 		delete deleted;
-	}*/
-
 	}
+
+}
 
 template<typename Type>
 	void DoublyLinkedList<Type>::Remove(int queue) {
@@ -107,28 +108,7 @@ template<typename Type>
 		}
 
 	}
-	/*template<typename Type>
-	void DoublyLinkedList<Type>::Add(int queue, const Type& data) {
-		Node<Type>* temp = GetNode(queue); 
-
-		if (temp) {
-			Node<Type>* novelNode = new Node<Type>(data);
-			Node<Type>* previousNode = temp->previous;
-			
-			if (temp == first) {
-				first = novelNode;
-			}
-			else
-			{
-				previousNode->next = novelNode;
-				novelNode->previous = previousNode;
-				novelNode->next = temp;
-				temp->previous = novelNode;
-				numberOfNode++;
-			}
-		}
-
-	}*/
+	
 	
 	/*template<typename Type>
 	void DoublyLinkedList<Type>::Append(const Type& data)

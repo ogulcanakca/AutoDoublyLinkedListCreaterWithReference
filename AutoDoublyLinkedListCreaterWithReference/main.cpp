@@ -1,21 +1,30 @@
 #include "DoublyLinkedList.cpp"
 #include "DoublyLinkedList.hpp"
 
-int main()
-{
-	DoublyLinkedList<int> list;
-	for (int i = 0; i < 5; i++) {
-		list.Append((i + 1) * 11);
+template<typename T>
+void f(const T& param,const int& count) {
+	DoublyLinkedList<T> list;
+
+	for (int i = 0; i < count; i++) {
+
+		list.Append(param);
+
 	}
 	std::cout << list;
-	for (int i = 0; i < 5; i++) {
+}
+
+int main()
+{
+	f(false,3);
+	
+	/*for (int i = 0; i < 5; i++) {
 		std::cout << list;
 		list.Remove(0);
 		
-	}
-	std::cout << list;
+	}*/
+	/*std::cout << list;
 	list.Append(6);
 
-	list.Add(5, 5);
-	std::cout << list;
+	list.Add(0, 5);
+	std::cout << list;*/
 }
