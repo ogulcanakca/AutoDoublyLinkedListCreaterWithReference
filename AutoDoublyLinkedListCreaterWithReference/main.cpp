@@ -1,22 +1,18 @@
 #include "DoublyLinkedList.cpp"
 #include "DoublyLinkedList.hpp"
 
+
 template<typename T>
-void f(const T& param,const int& count) {
+void f(const std::initializer_list<T>& args/*, const int& count*/) {
 	DoublyLinkedList<T> list;
-
-	for (int i = 0; i < count; i++) {
-
-		list.Append(param);
-
+	for (auto&& arg : args) {
+		list.Append(arg);
 	}
 	std::cout << list;
 }
-
 int main()
 {
-	f(false,3);
-	
+	f({'a','b','c','d'});
 	/*for (int i = 0; i < 5; i++) {
 		std::cout << list;
 		list.Remove(0);
