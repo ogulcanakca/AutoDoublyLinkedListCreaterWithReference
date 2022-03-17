@@ -1,26 +1,19 @@
 #include "DoublyLinkedList.cpp"
-#include "DoublyLinkedList.hpp"
 
-
-template<typename T>
-void f(const std::initializer_list<T>& args/*, const int& count*/) {
-	DoublyLinkedList<T> list;
-	for (auto&& arg : args) {
-		list.Append(arg);
-	}
-	std::cout << list;
-}
 int main()
 {
-	f({'a','b','c','d'});
+	DoublyLinkedList<char> list;
+	list.Append('2');
+	list.MultiAppend({ 'a','1','c','d'}, list);
 	/*for (int i = 0; i < 5; i++) {
 		std::cout << list;
 		list.Remove(0);
-		
-	}*/
-	/*std::cout << list;
-	list.Append(6);
-
-	list.Add(0, 5);
+	}
+	DoublyLinkedList<int> list_2;
+	list_2.Append(1);
+	std::cout << list_2;*/
+	/*list.Add(3, 'a');
 	std::cout << list;*/
+
+	return 0;
 }
